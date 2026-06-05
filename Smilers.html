@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Smilers — Entity 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link href="CSS/Entitiy.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --ent-accent: #e8e0d0;
+      --ent-glow: rgba(255,255,220,0.08);
+      --ent-border: rgba(220,210,180,0.25);
+      --ent-tag: #d4cfb0;
+    }
+    body { background-color: #0a0a08; }
+    .bk-page-header { background: radial-gradient(ellipse 70% 50% at 50% 60%, rgba(200,200,150,0.07) 0%, transparent 70%), #0a0a08; }
+    .bk-title { color: #e8e0d0; text-shadow: 0 0 40px rgba(220,220,160,0.3); }
+    .bk-subtitle { color: #8a8470; }
+    .bk-tag { color: #6a6450; }
+    .bk-divider { background: linear-gradient(90deg, transparent, #a0987a, transparent); }
+    .bk-skip-btn { border-color: #8a8470; color: #c8c0a0; background: rgba(140,130,100,0.1); }
+    .bk-skip-btn:hover { background: rgba(140,130,100,0.2); color: #e8e0d0; }
+    .ent-page { max-width: 860px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .ent-meta-bar { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; border: 1px solid var(--ent-border); background: rgba(0,0,0,0.3); padding: 0.9rem 1.4rem; margin-bottom: 2rem; }
+    .ent-meta-item { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .ent-meta-label { color: #4a4838; margin-right: 0.4rem; }
+    .ent-meta-val { color: var(--ent-accent); }
+    .ent-img-placeholder { border: 1px dashed var(--ent-border); background: rgba(0,0,0,0.2); padding: 3rem 1rem; text-align: center; color: #4a4838; font-size: 0.75rem; letter-spacing: 0.1em; font-family: 'Share Tech Mono', monospace; margin-bottom: 2rem; }
+    .ent-section { margin-bottom: 2rem; }
+    .ent-section-title { font-family: 'Special Elite', cursive; font-size: 0.95rem; color: var(--ent-accent); letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid var(--ent-border); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+    .ent-body { font-size: 0.83rem; color: #9a9278; line-height: 1.9; margin-bottom: 0.8rem; }
+    .ent-highlight { color: var(--ent-accent); font-style: normal; }
+    .ent-safety { border: 1px solid rgba(200,30,30,0.5); background: rgba(140,10,10,0.1); padding: 1rem 1.4rem; }
+    .ent-safety-title { font-family: 'Special Elite', cursive; font-size: 0.85rem; color: #cc3333; letter-spacing: 0.1em; margin-bottom: 0.6rem; }
+    .ent-do-list, .ent-dont-list { list-style: none; padding: 0; margin: 0; }
+    .ent-do-list li, .ent-dont-list li { font-size: 0.78rem; line-height: 1.8; padding: 0.1rem 0; }
+    .ent-do-list li { color: #5a9a60; }
+    .ent-do-list li::before { content: '✓  '; }
+    .ent-dont-list li { color: #9a3030; }
+    .ent-dont-list li::before { content: '✗  '; }
+    .ent-nav-back { display: inline-block; border: 1px solid var(--ent-border); color: #9a9278; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; padding: 0.45rem 1.1rem; margin-bottom: 2rem; transition: all 0.2s; }
+    .ent-nav-back:hover { color: var(--ent-accent); background: rgba(140,130,100,0.1); }
+    .bk-navbar { background-color: rgba(0,0,0,0.85) !important; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bk-navbar sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand bk-brand" href="index.html">☐ THE BACKROOMS <span class="bk-brand-sub">// WIKI</span></a>
+      <button class="navbar-toggler bk-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="levels.html">Levels</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link active" href="creatures.html">Creatures</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="objects.html">Strange Objects</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="phenomena.html">Phenomena</a></li>
+			 <li class="nav-item"><a class="nav-link bk-nav-link" href="Collab.html">Collaborators</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <header class="bk-page-header text-center">
+    <div class="bk-hero-inner mx-auto">
+      <p class="bk-tag">// Entity 1 · Hostile</p>
+      <h1 class="bk-title">The Smilers</h1>
+      <p class="bk-subtitle">They are always smiling. They cannot stop.</p>
+      <div class="bk-divider mx-auto"></div>
+      <a href="#entry" class="bk-skip-btn">↓ Read Entry</a>
+    </div>
+  </header>
+ 
+  <main class="ent-page" id="entry">
+    <a href="Entities.html" class="ent-nav-back">← Back to Entities</a>
+ 
+    <div class="ent-meta-bar">
+      <span class="ent-meta-item"><span class="ent-meta-label">Entity No.</span><span class="ent-meta-val">1</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Threat Level</span><span class="ent-meta-val">Hostile</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Habitat</span><span class="ent-meta-val">Any darkened level — most common on Levels 0–4, 6</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Frequency</span><span class="ent-meta-val">Extremely Common</span></span>
+    </div>
+ 
+    <div class="ent-img-placeholder"><img src="Images/Smiler.webp" alt="Smiler" width="500" height="600"></div>
+ 
+    <div class="ent-section">
+      <h3 class="ent-section-title">Appearance</h3>
+      <p class="ent-body">The Smilers are identified almost exclusively by two features: a wide, luminescent grin full of sharp teeth, and a pair of glowing white eyes. Their bodies — if they have them — are invisible in the darkness they inhabit, either because they are dark enough to be perfectly camouflaged, or because they do not have a conventional physical form at all. The true nature of their biology remains unresolved. Those who have come close enough to see more than the face have not produced useful reports.</p>
+      <p class="ent-body">The smile is permanent. It does not change with the entity's state or mood. It is the same whether the Smiler is at rest, stalking, or mid-attack. This is among the most psychologically unsettling properties they possess — there is no readable expression, no way to gauge intent from the face.</p>
+    </div>
+ 
+    <div class="ent-section">
+      <h3 class="ent-section-title">Behaviour</h3>
+      <p class="ent-body">Smilers inhabit darkness and appear to be attracted to light sources rather than repelled by them. Shining a light into a dark area does not drive them away — it draws them toward it. Pointing a light source directly at a Smiler has been documented to agitate it and trigger an attack response. The safest condition for avoiding them is, counterintuitively, extinguishing your light entirely.</p>
+      <p class="ent-body">When a wanderer is spotted but has not yet triggered an attack, Smilers will stalk at a distance — watching, following, waiting. The attack is not always immediate. They appear to wait for a specific trigger: <strong class="ent-highlight">panic, sudden noise, or rapid movement</strong>. As long as the wanderer maintains slow, calm movement and keeps eye contact, the Smiler will not advance.</p>
+      <p class="ent-body">They are typically solitary, but encounters with multiple Smilers simultaneously have been documented. Smilers are known to be antagonistic toward Frowners — if both are present, they will often disengage from a wanderer to pursue one another. This has been used as a survival strategy in extreme circumstances, though engineering such a situation is not reliable.</p>
+    </div>
+ 
+    <div class="ent-section">
+      <h3 class="ent-section-title">Known Biology</h3>
+      <p class="ent-body">The glowing features are produced by a luminescent biological substance. Their body mass, where it exists, appears to be a dark, formless material — occasionally described as resembling black smoke or shadow given physical weight. Some documented forms include loosely humanoid shapes, canid-like silhouettes, and — in documented cases near the ceilings of exterior dark levels — large twisted flying forms. Whether these represent different species or a single shapeshifting entity is not confirmed.</p>
+    </div>
+ 
+    <div class="ent-section ent-safety">
+      <h3 class="ent-safety-title">⚠ Survival Protocol</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <p style="font-size:0.7rem;letter-spacing:0.15em;color:#3a5a3a;text-transform:uppercase;margin-bottom:0.5rem;">Do</p>
+          <ul class="ent-do-list">
+            <li>Maintain steady eye contact if spotted</li>
+            <li>Move slowly and deliberately away</li>
+            <li>Stay as quiet as possible at all times</li>
+            <li>Turn off light sources if one is nearby and not yet aggressive</li>
+            <li>Use Smiler Repellent (Object 3) if available</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6">
+          <p style="font-size:0.7rem;letter-spacing:0.15em;color:#5a2020;text-transform:uppercase;margin-bottom:0.5rem;">Do Not</p>
+          <ul class="ent-dont-list">
+            <li>Run, unless it has already begun to charge</li>
+            <li>Shine a light directly at it</li>
+            <li>Make sudden loud noises</li>
+            <li>Look away or break eye contact</li>
+            <li>Show visible signs of panic</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+  <footer class="bk-footer text-center py-4">
+    <p class="mb-0">THE BACKROOMS WIKI &nbsp;|&nbsp; ALL INFORMATION COLLECTED AT GREAT PERSONAL RISK</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

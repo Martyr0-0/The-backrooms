@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Level 1 — The Backrooms Wiki</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link href="CSS/Individual.css" rel="stylesheet"/>
+  <style>
+    :root{
+      --lv-bg:#08090d; --lv-surface:rgba(20,25,40,0.6);
+      --lv-accent:#7ab0d4; --lv-accent2:#4a80a8;
+      --lv-text:#8aacca; --lv-muted:#3a5870;
+      --lv-border:rgba(100,160,210,0.2); --lv-glow:rgba(80,140,200,0.1);
+    }
+    body{background:var(--lv-bg);color:var(--lv-text);font-family:'Share Tech Mono',monospace;}
+    body::before{content:'';position:fixed;inset:0;
+      background:repeating-linear-gradient(to bottom,transparent,transparent 59px,rgba(80,120,180,0.03) 60px);
+      pointer-events:none;z-index:0;}
+    .lv-navbar{background:rgba(6,8,14,0.9)!important;border-bottom:1px solid var(--lv-border);backdrop-filter:blur(4px);}
+    .lv-brand{color:var(--lv-accent)!important;}
+    .bk-nav-link{color:var(--lv-muted)!important;}
+    .bk-nav-link:hover,.bk-nav-link.active{color:var(--lv-accent)!important;border-bottom-color:var(--lv-accent)!important;}
+    .lv-hero{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;text-align:center;
+      background:radial-gradient(ellipse 80% 60% at 50% 60%,rgba(60,120,180,0.08) 0%,transparent 70%);overflow:hidden;}
+    .lv-hero::before{content:'';position:absolute;inset:0;
+      background:repeating-linear-gradient(to bottom,transparent,transparent 3px,rgba(0,0,0,0.07) 4px);pointer-events:none;}
+    .lv-tag{font-size:.65rem;letter-spacing:.35em;color:var(--lv-muted);text-transform:uppercase;margin-bottom:.8rem;}
+    .lv-num{font-family:'Special Elite',cursive;font-size:clamp(4rem,10vw,7rem);color:rgba(60,120,180,0.1);
+      position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1;pointer-events:none;user-select:none;}
+    .lv-title{font-family:'Special Elite',cursive;font-size:clamp(2rem,5vw,3.5rem);color:var(--lv-accent);
+      text-shadow:0 0 50px rgba(80,150,220,0.3);position:relative;}
+    .lv-subtitle{color:var(--lv-muted);font-size:.9rem;letter-spacing:.1em;position:relative;}
+    .lv-divider{width:100px;height:1px;background:linear-gradient(90deg,transparent,var(--lv-accent2),transparent);margin:1.2rem auto;}
+    .lv-skip{display:inline-block;border:1px solid var(--lv-border);color:var(--lv-text);
+      font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+      padding:.4rem 1.1rem;background:rgba(80,140,200,0.06);transition:all .2s;position:relative;}
+    .lv-skip:hover{background:rgba(80,140,200,0.14);color:var(--lv-accent);}
+    .lv-body{max-width:900px;margin:0 auto;padding:3rem 1.5rem 5rem;position:relative;}
+    .lv-stat-bar{display:flex;flex-wrap:wrap;gap:.8rem;border:1px solid var(--lv-border);background:rgba(0,0,0,0.4);padding:.8rem 1.2rem;margin-bottom:2rem;}
+    .lv-stat{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;}
+    .lv-stat-lbl{color:var(--lv-muted);margin-right:.3rem;}
+    .lv-stat-val{color:var(--lv-accent);}
+    .lv-section{margin-bottom:2.2rem;}
+    .lv-section-title{font-family:'Special Elite',cursive;font-size:.95rem;color:var(--lv-accent);letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--lv-border);padding-bottom:.5rem;margin-bottom:1rem;}
+    .lv-p{font-size:.83rem;color:var(--lv-text);line-height:1.9;margin-bottom:.85rem;}
+    .lv-hl{color:var(--lv-accent);font-style:normal;}
+    .lv-img{border:1px dashed var(--lv-border);background:rgba(0,0,0,0.25);padding:2.5rem 1rem;text-align:center;color:var(--lv-muted);font-size:.72rem;letter-spacing:.1em;margin-bottom:1.2rem;}
+    .lv-entity-list{list-style:none;padding:0;margin:0;}
+    .lv-entity-list li{font-size:.8rem;color:var(--lv-text);line-height:1.85;padding:.15rem 0;}
+    .lv-entity-list li::before{content:'▸  ';color:var(--lv-accent2);}
+    .lv-enter-exit{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--lv-border);border:1px solid var(--lv-border);}
+    .lv-ee-block{background:var(--lv-bg);padding:1.2rem 1.4rem;}
+    .lv-ee-title{font-family:'Special Elite',cursive;font-size:.8rem;color:var(--lv-accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.7rem;}
+    .lv-ee-list{list-style:none;padding:0;margin:0;}
+    .lv-ee-list li{font-size:.77rem;color:var(--lv-muted);line-height:1.85;padding:.1rem 0;}
+    .lv-ee-list li::before{content:'→  ';color:var(--lv-accent2);}
+    .lv-back{display:inline-block;border:1px solid var(--lv-border);color:var(--lv-muted);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:.4rem 1rem;margin-bottom:2rem;transition:all .2s;}
+    .lv-back:hover{color:var(--lv-accent);background:rgba(80,140,200,0.08);}
+    .bk-footer{border-top:1px solid var(--lv-border);color:var(--lv-muted);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;}
+    @media(max-width:600px){.lv-enter-exit{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+ 
+  <nav class="navbar navbar-expand-lg lv-navbar sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand bk-brand lv-brand" href="index.html">☐ THE BACKROOMS <span class="bk-brand-sub">// WIKI</span></a>
+      <button class="navbar-toggler bk-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link bk-nav-link " href="Home.html">Home</a></li><li class="nav-item"><a class="nav-link bk-nav-link active" href="Levels.html">Levels</a></li><li class="nav-item"><a class="nav-link bk-nav-link " href="Entities.html">Entities</a></li><li class="nav-item"><a class="nav-link bk-nav-link " href="Strange objects.html">Strange Objects</a></li><li class="nav-item"><a class="nav-link bk-nav-link " href="phenomena.html">Phenomena</a></li></ul></div>
+		<li class="nav-item"><a class="nav-link bk-nav-link" href="Collab.html">Collaborators</a></li>
+    </div>
+  </nav>
+  <header class="lv-hero">
+    <div class="lv-num">1</div>
+    <div style="position:relative;padding:3rem 1.5rem;max-width:680px;">
+      <p class="lv-tag">// The Habitable Zone · Class 1 · Unsafe</p>
+      <h1 class="lv-title">Level 1</h1>
+      <p class="lv-subtitle">"Habitable Zone"</p>
+      <div class="lv-divider"></div>
+      <p style="font-size:.82rem;color:#3a5870;max-width:500px;margin:0 auto 1.5rem;">
+        The first level where survival is genuinely possible. Where communities exist. Where the walls are concrete and the crates sometimes have supplies.
+      </p>
+      <a href="#body" class="lv-skip">↓ Read Entry</a>
+    </div>
+  </header>
+ 
+  <main class="lv-body" id="body">
+    <a href="Levels.html" class="lv-back">← Back to Levels</a>
+    <div class="lv-stat-bar">
+      <span class="lv-stat"><span class="lv-stat-lbl">Class</span><span class="lv-stat-val">1 — Unsafe</span></span>
+      <span class="lv-stat"><span class="lv-stat-lbl">Safety</span><span class="lv-stat-val">Low — entities present</span></span>
+      <span class="lv-stat"><span class="lv-stat-lbl">Lighting</span><span class="lv-stat-val">Artificial — intermittent</span></span>
+      <span class="lv-stat"><span class="lv-stat-lbl">Size</span><span class="lv-stat-val">Infinite</span></span>
+    </div>
+ 
+    <div class="lv-section">
+      <h3 class="lv-section-title">Description</h3>
+      <div class="lv-img"><img src="Images/Level 1 1.webp" alt="Level 1" width="500" height="600"></div>
+      <p class="lv-p">Level 1 is the destination of almost everyone who successfully exits Level 0. The transition is immediate and unmistakable. The yellowed wallpaper and damp carpet of Level 0 give way to bare <strong class="lv-hl">concrete floors, concrete walls, and high industrial ceilings</strong> with exposed rafter frameworks. The fluorescent lighting is still present but mounted differently — more industrial, in long strip fixtures mounted to the rafters. The buzzing continues. The smell changes: less damp carpet, more cold concrete and rust.</p>
+      <p class="lv-p">The level takes the form of a vast, irregular warehouse complex. Crates and cardboard boxes are scattered throughout, and some contain useful supplies — food, water, tools, and occasionally Almond Water. The arrangement of these supplies is not reliable. You may search fifty crates and find nothing, then find three useful items in the next corridor. There is no pattern.</p>
+      <p class="lv-p">The geometry is still non-Euclidean but less aggressively so than Level 0. Navigation is possible with patience, though directions remain inconsistent. <strong class="lv-hl">The level is heavily populated</strong> relative to most of the Backrooms — established M.E.G. bases, trading outposts, and wanderer communities exist here. The M.E.G.'s primary field base, Base Alpha, operates in Level 1. The B.N.T.G. maintains supply infrastructure here. It is possible to find people.</p>
+      <div class="lv-img"><img src="Images/Level 1 2.webp" alt="Level 1" width="500" height="600"></div>
+      <p class="lv-p">A persistent, low-lying <strong class="lv-hl">fog</strong> covers the floor of many areas in Level 1. It is not dangerous in itself but reduces visibility at floor level significantly, which matters when entities are present. The light fixtures throughout the level fail at irregular intervals — sometimes briefly, sometimes for extended periods. When the lights go out, entities that were absent become active, and supplies can vanish without explanation. Carry a functional light source at all times and sleep holding anything you cannot afford to lose.</p>
+    </div>
+ 
+    <div class="lv-section">
+      <h3 class="lv-section-title">Entities</h3>
+      <p class="lv-p">Level 1 is home to several documented entity types. They <strong class="lv-hl">tend to avoid light and large groups</strong>, which is why the M.E.G. bases in this level function — sustained lighting and population keep entity activity suppressed in those areas. In isolated, dark, or abandoned sections, entity encounters are significantly more likely.</p>
+      <ul class="lv-entity-list">
+        <li>Dullers — present throughout, particularly in dark or isolated sections</li>
+        <li>Facelings (adult) — common, non-aggressive unless provoked</li>
+        <li>Hounds — active especially when lights fail</li>
+        <li>Skin-Stealers — reported near populated areas; verify any unfamiliar face</li>
+        <li>Smilers — present in any area of sustained darkness</li>
+        <li>Clumps — rare but documented in deeper warehouse sections</li>
+        <li>Deathmoths — congregate near light sources over time</li>
+      </ul>
+    </div>
+ 
+    <div class="lv-section">
+      <h3 class="lv-section-title">How to Enter &amp; Exit</h3>
+      <div class="lv-enter-exit">
+        <div class="lv-ee-block">
+          <h4 class="lv-ee-title">↓ Entrances</h4>
+          <ul class="lv-ee-list">
+            <li>Noclipping through any wall in Level 0 — the most common method</li>
+            <li>Entering the door labelled "1" within The Hub</li>
+            <li>Small chance of arrival from Level 4 via noclip</li>
+          </ul>
+        </div>
+        <div class="lv-ee-block">
+          <h4 class="lv-ee-title">↑ Exits</h4>
+          <ul class="lv-ee-list">
+            <li>Walking far enough in any direction gradually transitions into Level 2</li>
+            <li>Unlocked doors may lead to Level 2</li>
+            <li>Following the specific M.E.G.-documented door sequence leads to The Hub</li>
+            <li>Noclipping may return you to Level 0</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+  <footer class="bk-footer text-center py-4">
+    <p class="mb-0">THE BACKROOMS WIKI &nbsp;|&nbsp; ALL INFORMATION COLLECTED AT GREAT PERSONAL RISK</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

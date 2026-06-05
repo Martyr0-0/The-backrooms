@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facelings — Entity 5</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link href="CSS/Allentity.css" rel="stylesheet"/>
+  <style>
+    :root { --ent-accent:#b0c4d8; --ent-border:rgba(100,140,180,0.2); }
+    body { background-color:#080b0d; }
+    .bk-page-header { background: radial-gradient(ellipse 70% 50% at 50% 60%, rgba(130,160,200,0.08) 0%, transparent 70%), #080b0d; }
+    .bk-title { color:#b0c4d8; text-shadow:0 0 40px rgba(130,160,200,0.08); }
+    .bk-subtitle { color:#708090; }
+    .bk-tag { color:#708090; }
+    .bk-divider { background: linear-gradient(90deg, transparent, #b0c4d8, transparent); }
+    .bk-skip-btn { border-color:rgba(100,140,180,0.2); color:#b0c4d8; background: rgba(0,0,0,0.2); }
+    .bk-skip-btn:hover { background: rgba(0,0,0,0.35); color:#b0c4d8; }
+    .ent-page { max-width:860px; margin:0 auto; padding:3rem 1.5rem 5rem; }
+    .ent-meta-bar { display:flex; flex-wrap:wrap; gap:1rem; align-items:center; border:1px solid rgba(100,140,180,0.2); background:rgba(0,0,0,0.3); padding:0.9rem 1.4rem; margin-bottom:2rem; }
+    .ent-meta-item { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; }
+    .ent-meta-label { color:rgba(255,255,255,0.25); margin-right:0.4rem; }
+    .ent-meta-val { color:#b0c4d8; }
+    .ent-img-placeholder { border:1px dashed rgba(100,140,180,0.2); background:rgba(0,0,0,0.2); padding:3rem 1rem; text-align:center; color:rgba(255,255,255,0.2); font-size:0.75rem; letter-spacing:0.1em; font-family:'Share Tech Mono',monospace; margin-bottom:2rem; }
+    .ent-section { margin-bottom:2rem; }
+    .ent-section-title { font-family:'Special Elite',cursive; font-size:0.95rem; color:#b0c4d8; letter-spacing:0.12em; text-transform:uppercase; border-bottom:1px solid rgba(100,140,180,0.2); padding-bottom:0.5rem; margin-bottom:1rem; }
+    .ent-body { font-size:0.83rem; color:#708090; line-height:1.9; margin-bottom:0.8rem; }
+    .ent-highlight { color:#a0bcd0; font-style:normal; }
+    .ent-safety { border:1px solid rgba(200,30,30,0.4); background:rgba(100,10,10,0.1); padding:1rem 1.4rem; }
+    .ent-safety-title { font-family:'Special Elite',cursive; font-size:0.85rem; color:#cc3333; letter-spacing:0.1em; margin-bottom:0.6rem; }
+    .ent-do-list, .ent-dont-list { list-style:none; padding:0; margin:0; }
+    .ent-do-list li, .ent-dont-list li { font-size:0.78rem; line-height:1.8; padding:0.1rem 0; }
+    .ent-do-list li { color:#5a9a60; }
+    .ent-do-list li::before { content:'✓  '; }
+    .ent-dont-list li { color:#9a3030; }
+    .ent-dont-list li::before { content:'✗  '; }
+    .ent-nav-back { display:inline-block; border:1px solid rgba(100,140,180,0.2); color:#708090; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; text-decoration:none; padding:0.45rem 1.1rem; margin-bottom:2rem; transition:all 0.2s; }
+    .ent-nav-back:hover { color:#b0c4d8; background:rgba(0,0,0,0.2); }
+    .bk-navbar { background-color:rgba(0,0,0,0.88) !important; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bk-navbar sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand bk-brand" href="index.html">☐ THE BACKROOMS <span class="bk-brand-sub">// WIKI</span></a>
+      <button class="navbar-toggler bk-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Levels.html">Levels</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link active" href="Entities.html">Entities</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Strange objects.html">Strange Objects</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="phenomena.html">Phenomena</a></li>
+			 <li class="nav-item"><a class="nav-link bk-nav-link" href="Collab.html">Collaborators</a></li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <header class="bk-page-header text-center">
+    <div class="bk-hero-inner mx-auto">
+      <p class="bk-tag">// Entity 5 · Neutral</p>
+      <h1 class="bk-title">Facelings</h1>
+      <p class="bk-subtitle">The face was the only thing missing. Everything else was human.</p>
+      <div class="bk-divider mx-auto"></div>
+      <a href="#entry" class="bk-skip-btn">↓ Read Entry</a>
+    </div>
+  </header>
+ 
+  <main class="ent-page" id="entry">
+    <a href="Entities.html" class="ent-nav-back">← Back to Entities</a>
+    <div class="ent-meta-bar">
+      <span class="ent-meta-item"><span class="ent-meta-label">Entity No.</span><span class="ent-meta-val">5</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Threat Level</span><span class="ent-meta-val">Neutral</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Habitat</span><span class="ent-meta-val">Majority of levels</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Frequency</span><span class="ent-meta-val">Very Common</span></span>
+    </div>
+    <div class="ent-img-placeholder"><img src="Images/Facelings.webp" alt="Facelings" width="500" height="600"></div>
+    <div class="ent-section"><h3 class="ent-section-title">Appearance</h3><p class="ent-body">Facelings are humanoid entities that are, at casual distance, indistinguishable from ordinary people. They dress in mundane clothing appropriate to various decades and settings. Their build, posture, and movement are all within human norms. What distinguishes them is their face: it is entirely absent. Where eyes, nose, and mouth would be, there is smooth, featureless skin — as if the face was never there, or was removed and the surface healed over completely.</p><p class="ent-body">Up close the effect is profoundly unsettling. From ten metres away, a Faceling could be anyone. From two metres, there is no mistaking what it is. Both adult and child Facelings have been documented.</p></div>
+    <div class="ent-section"><h3 class="ent-section-title">Behaviour</h3><p class="ent-body">Facelings are one of the few entity types classified as neutral. The majority do not respond aggressively to wanderers. They move through levels without apparent destination or purpose — wandering, pausing, occasionally turning as if in response to something, then continuing. They do not appear to perceive their environment the way a sighted entity would, and yet they navigate it without difficulty.</p><p class="ent-body">Child Facelings are documented as more unpredictable than adults — mischievous, prone to taking objects from wanderers, and occasionally leading them in wrong directions, though not with apparent malicious intent. They should be treated as a nuisance rather than a threat.</p><p class="ent-body">Adult Facelings that are provoked, cornered, or harmed will defend themselves. A neutral entity forced into aggression is still dangerous. The classification as neutral assumes the wanderer does not initiate conflict.</p></div>
+    <div class="ent-section"><h3 class="ent-section-title">Biology &amp; Notes</h3><p class="ent-body">The prevailing theory is that Facelings were once wanderers who spent so long in the Backrooms that the environment fundamentally altered them — stripping away aspects of their humanity progressively until only the shell remained. This is not confirmed. They do not communicate in any documented way and show no recognition of their original names or identities.</p><p class="ent-body">Facelings are frequently preyed upon by more aggressive entities. They do not appear capable of recognising or avoiding threats, which may explain why encounters with them often coincide with nearby danger.</p></div>
+    <div class="ent-section ent-safety">
+      <h3 class="ent-safety-title">⚠ Survival Protocol</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <p style="font-size:0.7rem;letter-spacing:0.15em;color:#3a5a3a;text-transform:uppercase;margin-bottom:0.5rem;">Do</p>
+          <ul class="ent-do-list"><li>Observe from a distance before approaching</li><li>Move calmly past without making sudden movements</li><li>Note their presence as an indicator of a populated level</li><li>Leave child Facelings alone even if they take something minor</li></ul>
+        </div>
+        <div class="col-12 col-md-6">
+          <p style="font-size:0.7rem;letter-spacing:0.15em;color:#5a2020;text-transform:uppercase;margin-bottom:0.5rem;">Do Not</p>
+          <ul class="ent-dont-list"><li>Provoke, corner, or harm one</li><li>Assume the nearby Faceling means the area is safe — other entities prey on them</li><li>Mistake one for a human wanderer before verifying</li><li>Follow a child Faceling — they will not lead you anywhere useful</li></ul>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+  <footer class="bk-footer text-center py-4">
+    <p class="mb-0">THE BACKROOMS WIKI &nbsp;|&nbsp; ALL INFORMATION COLLECTED AT GREAT PERSONAL RISK</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

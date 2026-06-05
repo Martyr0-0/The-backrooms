@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skin-Stealers — Entity 3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link href="CSS/Allentity.css" rel="stylesheet"/>
+  <style>
+    :root { --ent-accent:#c8d4c0; --ent-border:rgba(120,160,100,0.2); }
+    body { background-color:#080d08; }
+    .bk-page-header { background: radial-gradient(ellipse 70% 50% at 50% 60%, rgba(150,180,130,0.08) 0%, transparent 70%), #080d08; }
+    .bk-title { color:#c8d4c0; text-shadow:0 0 40px rgba(150,180,130,0.08); }
+    .bk-subtitle { color:#7a9870; }
+    .bk-tag { color:#7a9870; }
+    .bk-divider { background: linear-gradient(90deg, transparent, #c8d4c0, transparent); }
+    .bk-skip-btn { border-color:rgba(120,160,100,0.2); color:#c8d4c0; background: rgba(0,0,0,0.2); }
+    .bk-skip-btn:hover { background: rgba(0,0,0,0.35); color:#c8d4c0; }
+    .ent-page { max-width:860px; margin:0 auto; padding:3rem 1.5rem 5rem; }
+    .ent-meta-bar { display:flex; flex-wrap:wrap; gap:1rem; align-items:center; border:1px solid rgba(120,160,100,0.2); background:rgba(0,0,0,0.3); padding:0.9rem 1.4rem; margin-bottom:2rem; }
+    .ent-meta-item { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; }
+    .ent-meta-label { color:rgba(255,255,255,0.25); margin-right:0.4rem; }
+    .ent-meta-val { color:#c8d4c0; }
+    .ent-img-placeholder { border:1px dashed rgba(120,160,100,0.2); background:rgba(0,0,0,0.2); padding:3rem 1rem; text-align:center; color:rgba(255,255,255,0.2); font-size:0.75rem; letter-spacing:0.1em; font-family:'Share Tech Mono',monospace; margin-bottom:2rem; }
+    .ent-section { margin-bottom:2rem; }
+    .ent-section-title { font-family:'Special Elite',cursive; font-size:0.95rem; color:#c8d4c0; letter-spacing:0.12em; text-transform:uppercase; border-bottom:1px solid rgba(120,160,100,0.2); padding-bottom:0.5rem; margin-bottom:1rem; }
+    .ent-body { font-size:0.83rem; color:#7a9870; line-height:1.9; margin-bottom:0.8rem; }
+    .ent-highlight { color:#b8d4a8; font-style:normal; }
+    .ent-safety { border:1px solid rgba(200,30,30,0.4); background:rgba(100,10,10,0.1); padding:1rem 1.4rem; }
+    .ent-safety-title { font-family:'Special Elite',cursive; font-size:0.85rem; color:#cc3333; letter-spacing:0.1em; margin-bottom:0.6rem; }
+    .ent-do-list, .ent-dont-list { list-style:none; padding:0; margin:0; }
+    .ent-do-list li, .ent-dont-list li { font-size:0.78rem; line-height:1.8; padding:0.1rem 0; }
+    .ent-do-list li { color:#5a9a60; }
+    .ent-do-list li::before { content:'✓  '; }
+    .ent-dont-list li { color:#9a3030; }
+    .ent-dont-list li::before { content:'✗  '; }
+    .ent-nav-back { display:inline-block; border:1px solid rgba(120,160,100,0.2); color:#7a9870; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; text-decoration:none; padding:0.45rem 1.1rem; margin-bottom:2rem; transition:all 0.2s; }
+    .ent-nav-back:hover { color:#c8d4c0; background:rgba(0,0,0,0.2); }
+    .bk-navbar { background-color:rgba(0,0,0,0.88) !important; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bk-navbar sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand bk-brand" href="index.html">☐ THE BACKROOMS <span class="bk-brand-sub">// WIKI</span></a>
+      <button class="navbar-toggler bk-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Levels.html">Levels</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link active" href="Entities.html">Entities</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Strange objects.html">Strange Objects</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="phenomena.html">Phenomena</a></li>
+			 <li class="nav-item"><a class="nav-link bk-nav-link" href="Collab.html">Collaborators</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <header class="bk-page-header text-center">
+    <div class="bk-hero-inner mx-auto">
+      <p class="bk-tag">// Entity 3 · Hostile</p>
+      <h1 class="bk-title">Skin-Stealers</h1>
+      <p class="bk-subtitle">It looked exactly like her. That was how you knew.</p>
+      <div class="bk-divider mx-auto"></div>
+      <a href="#entry" class="bk-skip-btn">↓ Read Entry</a>
+    </div>
+  </header>
+ 
+  <main class="ent-page" id="entry">
+    <a href="Entities.html" class="ent-nav-back">← Back to Entities</a>
+    <div class="ent-meta-bar">
+      <span class="ent-meta-item"><span class="ent-meta-label">Entity No.</span><span class="ent-meta-val">3</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Threat Level</span><span class="ent-meta-val">Hostile</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Habitat</span><span class="ent-meta-val">Levels 1–3 primarily, widespread</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Frequency</span><span class="ent-meta-val">Common</span></span>
+    </div>
+    <div class="ent-img-placeholder"><img src="Images/Skin-Stealers.webp" alt="Skin Stealers" width="500" height="600"></div>
+    <div class="ent-section"><h3 class="ent-section-title">Appearance</h3><p class="ent-body">Skin-Stealers are mimics. They appear as human beings — convincingly so at a distance, and sometimes uncomfortably convincingly up close. They replicate the appearance of wanderers they have encountered, including clothing, build, and general movement. The replication is not perfect: prolonged observation reveals unblinking eyes, slightly incorrect proportions, and movement that is smooth in ways a human body cannot be.</p><p class="ent-body">They do not have a known default form. What they look like without a copied appearance is not documented, as any Skin-Stealer not currently mimicking a human has not been observed and survived to report.</p></div>
+    <div class="ent-section"><h3 class="ent-section-title">Behaviour</h3><p class="ent-body">Skin-Stealers identify a target wanderer, study them from a distance, and then produce a copy of that person's appearance. The copy approaches a group or another individual posing as the original. The deception is used to get close enough to attack. They are patient — capable of maintaining the disguise for extended periods.</p><p class="ent-body">Warning signs include: someone who was not present suddenly appearing from a direction they could not have come from; someone who does not react to their own name being called; eyes that do not move or blink; a voice that is slightly wrong in pitch or timing; and a general sense of wrongness that experienced wanderers describe as immediately recognisable but impossible to precisely define.</p><p class="ent-body">They are dangerous in groups of wanderers specifically because the social structure of a group makes a familiar face automatically trusted. A Skin-Stealer in a group of three is far more dangerous than one encountered alone.</p></div>
+    <div class="ent-section"><h3 class="ent-section-title">Biology &amp; Notes</h3><p class="ent-body">Their method of replication is biological rather than technological — they absorb physical information about a target and reproduce it using their own body. Whether there is a true underlying form beneath the skin is unknown.</p><p class="ent-body">The M.E.G. recommends a standard verification protocol in any situation where you have been separated from your group: ask questions only the real person could answer. Do not rely on appearance alone.</p></div>
+    <div class="ent-section ent-safety">
+      <h3 class="ent-safety-title">⚠ Survival Protocol</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <p style="font-size:0.7rem;letter-spacing:0.15em;color:#3a5a3a;text-transform:uppercase;margin-bottom:0.5rem;">Do</p>
+          <ul class="ent-do-list"><li>Establish group verification protocols before separating</li><li>Ask questions only the real person could answer</li><li>Trust your instincts if someone feels wrong</li><li>Use a flashlight to check eye reflections — Skin-Stealers reflect differently</li></ul>
+        </div>
+        <div class="col-12 col-md-6">
+          <p style="font-size:0.7rem;letter-spacing:0.15em;color:#5a2020;text-transform:uppercase;margin-bottom:0.5rem;">Do Not</p>
+          <ul class="ent-dont-list"><li>Trust someone purely on the basis of their appearance</li><li>Allow an unverified person to approach close behind you</li><li>Assume familiarity equals safety</li><li>Ignore the feeling that something is wrong</li></ul>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+  <footer class="bk-footer text-center py-4">
+    <p class="mb-0">THE BACKROOMS WIKI &nbsp;|&nbsp; ALL INFORMATION COLLECTED AT GREAT PERSONAL RISK</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

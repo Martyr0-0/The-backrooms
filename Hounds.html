@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hounds — Entity 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link href="CSS/Allentity.css" rel="stylesheet"/>
+  <style>
+    :root { --ent-accent:#c84040; --ent-border:rgba(180,40,40,0.25); }
+    body { background-color:#0d0808; }
+    .bk-page-header { background: radial-gradient(ellipse 70% 50% at 50% 60%, rgba(200,40,40,0.1) 0%, transparent 70%), #0d0808; }
+    .bk-title { color:#c84040; text-shadow:0 0 40px rgba(200,40,40,0.1); }
+    .bk-subtitle { color:#804040; }
+    .bk-tag { color:#804040; }
+    .bk-divider { background: linear-gradient(90deg, transparent, #c84040, transparent); }
+    .bk-skip-btn { border-color:rgba(180,40,40,0.25); color:#c84040; background: rgba(0,0,0,0.2); }
+    .bk-skip-btn:hover { background: rgba(0,0,0,0.35); color:#c84040; }
+    .ent-page { max-width:860px; margin:0 auto; padding:3rem 1.5rem 5rem; }
+    .ent-meta-bar { display:flex; flex-wrap:wrap; gap:1rem; align-items:center; border:1px solid rgba(180,40,40,0.25); background:rgba(0,0,0,0.3); padding:0.9rem 1.4rem; margin-bottom:2rem; }
+    .ent-meta-item { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; }
+    .ent-meta-label { color:rgba(255,255,255,0.25); margin-right:0.4rem; }
+    .ent-meta-val { color:#c84040; }
+    .ent-img-placeholder { border:1px dashed rgba(180,40,40,0.25); background:rgba(0,0,0,0.2); padding:3rem 1rem; text-align:center; color:rgba(255,255,255,0.2); font-size:0.75rem; letter-spacing:0.1em; font-family:'Share Tech Mono',monospace; margin-bottom:2rem; }
+    .ent-section { margin-bottom:2rem; }
+    .ent-section-title { font-family:'Special Elite',cursive; font-size:0.95rem; color:#c84040; letter-spacing:0.12em; text-transform:uppercase; border-bottom:1px solid rgba(180,40,40,0.25); padding-bottom:0.5rem; margin-bottom:1rem; }
+    .ent-body { font-size:0.83rem; color:#804040; line-height:1.9; margin-bottom:0.8rem; }
+    .ent-highlight { color:#e05050; font-style:normal; }
+    .ent-safety { border:1px solid rgba(200,30,30,0.4); background:rgba(100,10,10,0.1); padding:1rem 1.4rem; }
+    .ent-safety-title { font-family:'Special Elite',cursive; font-size:0.85rem; color:#cc3333; letter-spacing:0.1em; margin-bottom:0.6rem; }
+    .ent-do-list, .ent-dont-list { list-style:none; padding:0; margin:0; }
+    .ent-do-list li, .ent-dont-list li { font-size:0.78rem; line-height:1.8; padding:0.1rem 0; }
+    .ent-do-list li { color:#5a9a60; }
+    .ent-do-list li::before { content:'✓  '; }
+    .ent-dont-list li { color:#9a3030; }
+    .ent-dont-list li::before { content:'✗  '; }
+    .ent-nav-back { display:inline-block; border:1px solid rgba(180,40,40,0.25); color:#804040; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; text-decoration:none; padding:0.45rem 1.1rem; margin-bottom:2rem; transition:all 0.2s; }
+    .ent-nav-back:hover { color:#c84040; background:rgba(0,0,0,0.2); }
+    .bk-navbar { background-color:rgba(0,0,0,0.88) !important; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bk-navbar sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand bk-brand" href="Home.html">☐ THE BACKROOMS <span class="bk-brand-sub">// WIKI</span></a>
+      <button class="navbar-toggler bk-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link bk-nav-link" href=Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Levels.html">Levels</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link active" href="Entities.html">Entities</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Strange objects.html">Strange Objects</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="phenomena.html">Phenomena</a></li>
+			   <li class="nav-item"><a class="nav-link bk-nav-link" href="Collab.html">Collaborators</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <header class="bk-page-header text-center">
+    <div class="bk-hero-inner mx-auto">
+      <p class="bk-tag">// Entity 4 · Hostile</p>
+      <h1 class="bk-title">Hounds</h1>
+      <p class="bk-subtitle">Whatever it was before, it is not that now.</p>
+      <div class="bk-divider mx-auto"></div>
+      <a href="#entry" class="bk-skip-btn">↓ Read Entry</a>
+    </div>
+  </header>
+ 
+  <main class="ent-page" id="entry">
+    <a href="Entities.html" class="ent-nav-back">← Back to Entities</a>
+    <div class="ent-meta-bar">
+      <span class="ent-meta-item"><span class="ent-meta-label">Entity No.</span><span class="ent-meta-val">4</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Threat Level</span><span class="ent-meta-val">Hostile</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Habitat</span><span class="ent-meta-val">Majority of levels, particularly damp or derelict areas</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Frequency</span><span class="ent-meta-val">Common</span></span>
+    </div>
+    <div class="ent-img-placeholder"><img src="Images/Hounds.webp" alt="Girl in a jacket" width="500" height="600"></div>
+    <div class="ent-section"><h3 class="ent-section-title">Appearance</h3><p class="ent-body">Hounds are canid-shaped entities that move on all fours. Their overall body plan resembles a large dog, though the proportions are wrong — the limbs are too long relative to the body, the jaw is too large for the skull, and the teeth are too numerous. Their colouring ranges from pale grey-white to dark brown, and their eyes have a faint reddish glow in darkness. The body shows evidence of having once been something else.</p><p class="ent-body">The transformation into a Hound is caused by a neurotropic infection — designated the Hound Virus or Egremond Syndrome — that produces rapid and violent physical change in the host over a period of twenty to thirty minutes. The process is painful and complete. What the Hound was before is no longer recoverable.</p></div>
+    <div class="ent-section"><h3 class="ent-section-title">Behaviour</h3><p class="ent-body">Hounds hunt primarily by sound and movement. They do not rely on light or darkness and are active regardless of environmental conditions. They have been documented covering large distances quickly and are capable of jumping barriers that would stop a human wanderer.</p><p class="ent-body">They do not stalk in the way Smilers do. A Hound that becomes aware of a target generally begins pursuit immediately. However, they can be temporarily driven back by light — a bright flashlight directed at a Hound causes it to retreat, at least briefly. This is one of the few entity types where carrying a functional light source is specifically protective.</p><p class="ent-body">Hounds have been documented hunting in pairs or small groups. When multiple Hounds are present, they appear to coordinate — one driving the target in a direction while others wait.</p></div>
+    <div class="ent-section"><h3 class="ent-section-title">Biology &amp; Notes</h3><p class="ent-body">The Hound Virus is transmissible. A bite that breaks the skin carries infection risk. Anyone bitten by a Hound must be monitored closely. Symptoms begin within hours. There is no documented cure. Early-stage infection can be slowed by Almond Water but not reversed.</p><p class="ent-body">The intelligence of Hounds appears to be limited but not absent. They can be confused by sudden changes in direction and have been documented briefly losing a trail they were following closely.</p></div>
+    <div class="ent-section ent-safety">
+      <h3 class="ent-safety-title">⚠ Survival Protocol</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <p style="font-size:0.7rem;letter-spacing:0.15em;color:#3a5a3a;text-transform:uppercase;margin-bottom:0.5rem;">Do</p>
+          <ul class="ent-do-list"><li>Use a bright flashlight to drive one back</li><li>Move quickly and unpredictably if pursued</li><li>Climb — Hounds cannot open doors or climb easily</li><li>Alert others to their presence immediately</li></ul>
+        </div>
+        <div class="col-12 col-md-6">
+          <p style="font-size:0.7rem;letter-spacing:0.15em;color:#5a2020;text-transform:uppercase;margin-bottom:0.5rem;">Do Not</p>
+          <ul class="ent-dont-list"><li>Allow a bite to go unacknowledged — report it</li><li>Run in a straight line — change direction repeatedly</li><li>Assume one Hound means only one Hound</li><li>Ignore bite wounds</li></ul>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+  <footer class="bk-footer text-center py-4">
+    <p class="mb-0">THE BACKROOMS WIKI &nbsp;|&nbsp; ALL INFORMATION COLLECTED AT GREAT PERSONAL RISK</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

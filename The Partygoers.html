@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Partygoers — Entity 2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link href="css/Allentity.css" rel="stylesheet"/>
+  <style>
+    :root { --ent-accent:#f5c842; --ent-border:rgba(200,150,20,0.25); }
+    body { background-color:#0d0900; }
+    .bk-page-header { background: radial-gradient(ellipse 70% 50% at 50% 60%, rgba(245,180,30,0.1) 0%, transparent 70%), #0d0900; }
+    .bk-title { color:#f5c842; text-shadow:0 0 40px rgba(245,180,30,0.1); }
+    .bk-subtitle { color:#a08830; }
+    .bk-tag { color:#a08830; }
+    .bk-divider { background: linear-gradient(90deg, transparent, #f5c842, transparent); }
+    .bk-skip-btn { border-color:rgba(200,150,20,0.25); color:#f5c842; background: rgba(0,0,0,0.2); }
+    .bk-skip-btn:hover { background: rgba(0,0,0,0.35); color:#f5c842; }
+    .ent-page { max-width:860px; margin:0 auto; padding:3rem 1.5rem 5rem; }
+    .ent-meta-bar { display:flex; flex-wrap:wrap; gap:1rem; align-items:center; border:1px solid rgba(200,150,20,0.25); background:rgba(0,0,0,0.3); padding:0.9rem 1.4rem; margin-bottom:2rem; }
+    .ent-meta-item { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; }
+    .ent-meta-label { color:rgba(255,255,255,0.25); margin-right:0.4rem; }
+    .ent-meta-val { color:#f5c842; }
+    .ent-img-placeholder { border:1px dashed rgba(200,150,20,0.25); background:rgba(0,0,0,0.2); padding:3rem 1rem; text-align:center; color:rgba(255,255,255,0.2); font-size:0.75rem; letter-spacing:0.1em; font-family:'Share Tech Mono',monospace; margin-bottom:2rem; }
+    .ent-section { margin-bottom:2rem; }
+    .ent-section-title { font-family:'Special Elite',cursive; font-size:0.95rem; color:#f5c842; letter-spacing:0.12em; text-transform:uppercase; border-bottom:1px solid rgba(200,150,20,0.25); padding-bottom:0.5rem; margin-bottom:1rem; }
+    .ent-body { font-size:0.83rem; color:#a08830; line-height:1.9; margin-bottom:0.8rem; }
+    .ent-highlight { color:#f0c030; font-style:normal; }
+    .ent-safety { border:1px solid rgba(200,30,30,0.4); background:rgba(100,10,10,0.1); padding:1rem 1.4rem; }
+    .ent-safety-title { font-family:'Special Elite',cursive; font-size:0.85rem; color:#cc3333; letter-spacing:0.1em; margin-bottom:0.6rem; }
+    .ent-do-list, .ent-dont-list { list-style:none; padding:0; margin:0; }
+    .ent-do-list li, .ent-dont-list li { font-size:0.78rem; line-height:1.8; padding:0.1rem 0; }
+    .ent-do-list li { color:#5a9a60; }
+    .ent-do-list li::before { content:'✓  '; }
+    .ent-dont-list li { color:#9a3030; }
+    .ent-dont-list li::before { content:'✗  '; }
+    .ent-nav-back { display:inline-block; border:1px solid rgba(200,150,20,0.25); color:#a08830; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; text-decoration:none; padding:0.45rem 1.1rem; margin-bottom:2rem; transition:all 0.2s; }
+    .ent-nav-back:hover { color:#f5c842; background:rgba(0,0,0,0.2); }
+    .bk-navbar { background-color:rgba(0,0,0,0.88) !important; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bk-navbar sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand bk-brand" href="index.html">☐ THE BACKROOMS <span class="bk-brand-sub">// WIKI</span></a>
+      <button class="navbar-toggler bk-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Levels.html">Levels</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link active" href="Entities.html">Entities</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Strange objects.html">Strange Objects</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="phenomena.html">Phenomena</a></li>
+          <li class="nav-item"><a class="nav-link bk-nav-link" href="Collab.html">Collaborators</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <header class="bk-page-header text-center">
+    <div class="bk-hero-inner mx-auto">
+      <p class="bk-tag">// Entity 2 · Hostile</p>
+      <h1 class="bk-title">The Partygoers</h1>
+      <p class="bk-subtitle">The party never started. It never ends either.</p>
+      <div class="bk-divider mx-auto"></div>
+      <a href="#entry" class="bk-skip-btn">↓ Read Entry</a>
+    </div>
+  </header>
+ 
+  <main class="ent-page" id="entry">
+    <a href="Entities.html" class="ent-nav-back">← Back to Entities</a>
+    <div class="ent-meta-bar">
+      <span class="ent-meta-item"><span class="ent-meta-label">Entity No.</span><span class="ent-meta-val">2</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Threat Level</span><span class="ent-meta-val">Hostile</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Habitat</span><span class="ent-meta-val">Level Fun (Level ! ), occasionally other levels</span></span>
+      <span class="ent-meta-item"><span class="ent-meta-label">Frequency</span><span class="ent-meta-val">Rare outside Level Fun</span></span>
+    </div>
+    <div class="ent-img-placeholder"><img src="Images/Smiler.webp" alt="Smilers" width="500" height="600"></div>
+    <div class="ent-section"><h3 class="ent-section-title">Appearance</h3><p class="ent-body">The Partygoers are tall, gaunt humanoid figures wearing brightly coloured party attire — hats, streamers, oversized clothing — in a state of visible decay and distortion. Their proportions are wrong in ways that are difficult to specify: limbs slightly too long, heads slightly too large, movements that do not flow the way a human body should move. Their faces are wide and fixed in expressions of forced celebration.</p><p class="ent-body">Despite the festive appearance, nothing about them reads as joyful in person. Accounts consistently describe an overwhelming sense of wrongness — the visual information of a party and the instinctive understanding that this is not a party.</p></div>
+    <div class="ent-section"><h3 class="ent-section-title">Behaviour</h3><p class="ent-body">Partygoers inhabit Level Fun almost exclusively, though rare reports place them in other levels during specific events. Within Level Fun, they are persistently present and actively hunt wanderers. They communicate with each other through sounds described as distorted laughter, off-key music, and the noise of party horns — all slightly too slow or too fast to be right.</p><p class="ent-body">They pursue wanderers relentlessly once aware of their presence. They do not tire. They do not lose interest. The pursuit in Level Fun is documented as lasting until the wanderer is either caught or exits the level. Their coordination with one another is notable — they appear to have a shared awareness of a target's location even when individually out of range.</p><p class="ent-body">There is no documented method of appeasing or distracting a Partygoer. They do not respond to food, sound, or light in the way other entities do. The only reliable survival strategy within Level Fun is to exit it as quickly as possible.</p></div>
+    <div class="ent-section"><h3 class="ent-section-title">Biology &amp; Notes</h3><p class="ent-body">Level Fun is itself anomalous — a brightly lit, heavily decorated level that disorients wanderers through cheerful aesthetics at odds with its extreme danger. The Partygoers appear to be native to or generated by that level's properties. Whether they exist outside it as independent entities or are a manifestation of the level itself is not resolved.</p><p class="ent-body">No Partygoer has ever been documented to speak. The sounds they produce are environmental rather than communicative.</p></div>
+    <div class="ent-section ent-safety">
+      <h3 class="ent-safety-title">⚠ Survival Protocol</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <p style="font-size:0.7rem;letter-spacing:0.15em;color:#3a5a3a;text-transform:uppercase;margin-bottom:0.5rem;">Do</p>
+          <ul class="ent-do-list"><li>Exit Level Fun by any available means immediately</li><li>Move quickly and quietly toward any exit</li><li>Avoid making noise that confirms your location</li><li>Document your entry point for others</li></ul>
+        </div>
+        <div class="col-12 col-md-6">
+          <p style="font-size:0.7rem;letter-spacing:0.15em;color:#5a2020;text-transform:uppercase;margin-bottom:0.5rem;">Do Not</p>
+          <ul class="ent-dont-list"><li>Attempt to communicate with or reason with one</li><li>Slow down for any reason once pursuit has begun</li><li>Re-enter Level Fun without preparation</li><li>Assume the pursuit has ended</li></ul>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+  <footer class="bk-footer text-center py-4">
+    <p class="mb-0">THE BACKROOMS WIKI &nbsp;|&nbsp; ALL INFORMATION COLLECTED AT GREAT PERSONAL RISK</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

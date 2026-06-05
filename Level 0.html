@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Level 0 — The Backrooms Wiki</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link href="CSS/Individual.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --lv-bg:#0c0c06; --lv-surface:rgba(40,42,10,0.55);
+      --lv-accent:#d4c84a; --lv-accent2:#a89c28;
+      --lv-text:#b8b060; --lv-muted:#6a6430;
+      --lv-border:rgba(180,170,60,0.22); --lv-glow:rgba(200,190,60,0.12);
+    }
+    body{background:var(--lv-bg);color:var(--lv-text);font-family:'Share Tech Mono',monospace;}
+    body::before{content:'';position:fixed;inset:0;background:
+      repeating-linear-gradient(0deg,transparent,transparent 47px,rgba(180,170,40,0.03) 48px),
+      repeating-linear-gradient(90deg,transparent,transparent 47px,rgba(180,170,40,0.03) 48px);
+      pointer-events:none;z-index:0;}
+    .lv-navbar{background:rgba(10,10,4,0.88)!important;border-bottom:1px solid var(--lv-border);backdrop-filter:blur(4px);}
+    .lv-brand{color:var(--lv-accent)!important;}
+    .bk-nav-link{color:var(--lv-muted)!important;}
+    .bk-nav-link:hover,.bk-nav-link.active{color:var(--lv-accent)!important;border-bottom-color:var(--lv-accent)!important;}
+    /* hero */
+    .lv-hero{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;text-align:center;
+      background:radial-gradient(ellipse 80% 60% at 50% 60%,rgba(180,170,30,0.1) 0%,transparent 70%);overflow:hidden;}
+    .lv-hero::before{content:'';position:absolute;inset:0;
+      background:repeating-linear-gradient(to bottom,transparent,transparent 3px,rgba(0,0,0,0.06) 4px);pointer-events:none;}
+    .lv-tag{font-size:.65rem;letter-spacing:.35em;color:var(--lv-muted);text-transform:uppercase;margin-bottom:.8rem;}
+    .lv-num{font-family:'Special Elite',cursive;font-size:clamp(4rem,10vw,7rem);color:rgba(180,170,40,0.12);
+      position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1;pointer-events:none;user-select:none;}
+    .lv-title{font-family:'Special Elite',cursive;font-size:clamp(2rem,5vw,3.5rem);color:var(--lv-accent);
+      text-shadow:0 0 50px rgba(200,190,50,0.35);animation:lv-flicker 10s infinite;position:relative;}
+    .lv-subtitle{color:var(--lv-muted);font-size:.9rem;letter-spacing:.1em;position:relative;}
+    .lv-divider{width:100px;height:1px;background:linear-gradient(90deg,transparent,var(--lv-accent2),transparent);margin:1.2rem auto;}
+    .lv-skip{display:inline-block;border:1px solid var(--lv-border);color:var(--lv-text);
+      font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+      padding:.4rem 1.1rem;background:rgba(180,170,40,0.06);transition:all .2s;position:relative;}
+    .lv-skip:hover{background:rgba(180,170,40,0.14);color:var(--lv-accent);}
+    /* body */
+    .lv-body{max-width:900px;margin:0 auto;padding:3rem 1.5rem 5rem;position:relative;}
+    .lv-stat-bar{display:flex;flex-wrap:wrap;gap:.8rem;border:1px solid var(--lv-border);
+      background:rgba(0,0,0,0.4);padding:.8rem 1.2rem;margin-bottom:2rem;}
+    .lv-stat{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;}
+    .lv-stat-lbl{color:var(--lv-muted);margin-right:.3rem;}
+    .lv-stat-val{color:var(--lv-accent);}
+    .lv-section{margin-bottom:2.2rem;}
+    .lv-section-title{font-family:'Special Elite',cursive;font-size:.95rem;color:var(--lv-accent);
+      letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--lv-border);
+      padding-bottom:.5rem;margin-bottom:1rem;}
+    .lv-p{font-size:.83rem;color:var(--lv-text);line-height:1.9;margin-bottom:.85rem;}
+    .lv-hl{color:var(--lv-accent);font-style:normal;}
+    .lv-img{border:1px dashed var(--lv-border);background:rgba(0,0,0,0.25);
+      padding:2.5rem 1rem;text-align:center;color:var(--lv-muted);
+      font-size:.72rem;letter-spacing:.1em;margin-bottom:1.2rem;}
+    .lv-entity-list{list-style:none;padding:0;margin:0;}
+    .lv-entity-list li{font-size:.8rem;color:var(--lv-text);line-height:1.85;padding:.15rem 0;}
+    .lv-entity-list li::before{content:'▸  ';color:var(--lv-accent2);}
+    .lv-enter-exit{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--lv-border);border:1px solid var(--lv-border);}
+    .lv-ee-block{background:var(--lv-bg);padding:1.2rem 1.4rem;}
+    .lv-ee-title{font-family:'Special Elite',cursive;font-size:.8rem;color:var(--lv-accent);
+      letter-spacing:.12em;text-transform:uppercase;margin-bottom:.7rem;}
+    .lv-ee-list{list-style:none;padding:0;margin:0;}
+    .lv-ee-list li{font-size:.77rem;color:var(--lv-muted);line-height:1.85;padding:.1rem 0;}
+    .lv-ee-list li::before{content:'→  ';color:var(--lv-accent2);}
+    .lv-back{display:inline-block;border:1px solid var(--lv-border);color:var(--lv-muted);
+      font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+      padding:.4rem 1rem;margin-bottom:2rem;transition:all .2s;}
+    .lv-back:hover{color:var(--lv-accent);background:rgba(180,170,40,0.08);}
+    .bk-footer{border-top:1px solid var(--lv-border);color:var(--lv-muted);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;}
+    @keyframes lv-flicker{0%,93%,100%{opacity:1}94%{opacity:.8}95%{opacity:1}97%{opacity:.5}98%{opacity:1}}
+    @media(max-width:600px){.lv-enter-exit{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+ 
+  <nav class="navbar navbar-expand-lg lv-navbar sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand bk-brand lv-brand" href="index.html">☐ THE BACKROOMS <span class="bk-brand-sub">// WIKI</span></a>
+      <button class="navbar-toggler bk-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link bk-nav-link " href="Home.html">Home</a></li>
+		  <li class="nav-item"><a class="nav-link bk-nav-link active" href="Levels.html">Levels</a></li>
+		  <li class="nav-item"><a class="nav-link bk-nav-link " href="Entities.html">Entities</a></li>
+		  <li class="nav-item"><a class="nav-link bk-nav-link " href="Strange objects.html">Strange Objects</a></li>
+		  <li class="nav-item"><a class="nav-link bk-nav-link " href="phenomena.html">Phenomena</a></li></ul></div>
+		<li class="nav-item"><a class="nav-link bk-nav-link" href="Collab.html">Collaborators</a></li>
+    </div>
+  </nav>
+  <header class="lv-hero">
+    <div class="lv-num">0</div>
+    <div style="position:relative;padding:3rem 1.5rem;max-width:680px;">
+      <p class="lv-tag">// The Beginning · Class 0 · Deadzone</p>
+      <h1 class="lv-title">Level 0</h1>
+      <p class="lv-subtitle">"Threshold"</p>
+      <div class="lv-divider"></div>
+      <p style="font-size:.82rem;color:#6a6430;max-width:500px;margin:0 auto 1.5rem;">
+        The first thing most wanderers ever see. The last thing many of them see as well.
+      </p>
+      <a href="#body" class="lv-skip">↓ Read Entry</a>
+    </div>
+  </header>
+ 
+  <main class="lv-body" id="body">
+    <a href="Levels.html" class="lv-back">← Back to Levels</a>
+ 
+    <div class="lv-stat-bar">
+      <span class="lv-stat"><span class="lv-stat-lbl">Class</span><span class="lv-stat-val">0 — Deadzone</span></span>
+      <span class="lv-stat"><span class="lv-stat-lbl">Safety</span><span class="lv-stat-val">Entity-Free (unconfirmed)</span></span>
+      <span class="lv-stat"><span class="lv-stat-lbl">Lighting</span><span class="lv-stat-val">Fluorescent — unreliable</span></span>
+      <span class="lv-stat"><span class="lv-stat-lbl">Size</span><span class="lv-stat-val">Infinite</span></span>
+    </div>
+ 
+    <div class="lv-section">
+      <h3 class="lv-section-title">Description</h3>
+      <div class="lv-img"><img src="Images/level 0 1.webp" alt="Level 0" width="500" height="600"></div>
+      <p class="lv-p">Level 0 is the entry point to the Backrooms for the vast majority of wanderers who noclip from the Frontrooms. It is an infinite, non-Euclidean maze of interconnected rooms and corridors, all sharing the same defining visual characteristics: <strong class="lv-hl">moist yellow wallpaper</strong> peeling in places, a damp yellow-green carpet soaked with an unidentified fluid that is not safe to consume, and banks of fluorescent ceiling lights producing a harsh, constant buzz. The smell is one of the most consistently reported details — old carpet, damp wallpaper, and a faint odour described as resembling a cleaning product that does not quite cover something beneath it.</p>
+      <p class="lv-p">The geometry of Level 0 is deeply wrong. Walking in a straight line does not produce a straight path — it is entirely possible to travel in an unwavering direction and return to where you started without ever turning. Retracing your steps will not take you back through the same rooms. The layout changes. No compass, GPS, or navigation device functions reliably here. Radio communications become distorted and often useless. There is no way to map this level that remains accurate for long enough to be useful.</p>
+      <p class="lv-p">The lighting, while present in most areas, is not guaranteed. <strong class="lv-hl">Blackout zones</strong> exist throughout Level 0 — entire sections stripped of all illumination, plunged into complete darkness that shifts and rearranges itself in the low visibility. The floors in these zones are often recessed, pooling with ankle-deep fluid. If you find yourself in a blackout zone, move immediately toward any visible glimmer of light, or follow the sound of fluorescent buzzing until you locate the lit section. Do not stop moving.</p>
+      <div class="lv-img"><img src="Images/Level 0 2.webp" alt="Level 0" width="500" height="600"></div>
+      <p class="lv-p">A notable anomaly within Level 0 is <strong class="lv-hl">The Manila Room</strong> — a single isolated space with distinctive manila-patterned wallpaper that differs from the rest of the level. Its overhead light is dimmer and warmer than the surrounding fluorescents. It can appear anywhere throughout the level after a great distance of travel. Unlike the rest of Level 0, wanderers can actually meet one another inside the Manila Room, making it the closest thing this level has to a safe gathering point. M.E.G. documentation has been found here. It is a dead end, but a rare place to rest.</p>
+    </div>
+ 
+    <div class="lv-section">
+      <h3 class="lv-section-title">Phenomena &amp; Hazards</h3>
+      <p class="lv-p">Level 0 produces hallucinations consistently and without warning. Documented experiences include: the fluorescent humming rising to a physically painful volume before cutting to total silence; the apparent appearance of doors, stairs, and other structures that vanish when approached; acute and disorienting déjà vu; sounds resembling human speech in no recognisable language; and movement in peripheral vision beneath the wallpaper, resembling insects — which disappears the moment the wall is looked at directly.</p>
+      <p class="lv-p">CO2 levels within Level 0 have been measured at a slowly rising rate. The significance of this is not yet understood. If you notice increasing difficulty breathing, treat it as a navigation emergency and prioritise finding an exit above all else.</p>
+      <p class="lv-p">The fluid on the carpet is toxic. Do not drink it regardless of desperation. It is not Almond Water and it will not keep you alive.</p>
+    </div>
+ 
+    <div class="lv-section">
+      <h3 class="lv-section-title">Entities</h3>
+      <p class="lv-p">Level 0 is believed to be <strong class="lv-hl">devoid of entities</strong> — at least in the conventional sense. No confirmed entity encounters have been logged within the main body of the level. However: <em>if you see, hear, or encounter what appears to be another wanderer inside Level 0, it is not a human.</em> No contact with other wanderers within the main level has ever been verified. Treat any apparent human presence as hostile until you are in the Manila Room.</p>
+      <ul class="lv-entity-list">
+        <li>No confirmed entities in the main level</li>
+        <li>Any apparent human presence should be treated as hostile</li>
+        <li>Hallucinations may produce the impression of entities — these are environmental, not biological</li>
+      </ul>
+    </div>
+ 
+    <div class="lv-section">
+      <h3 class="lv-section-title">How to Enter &amp; Exit</h3>
+      <div class="lv-enter-exit">
+        <div class="lv-ee-block">
+          <h4 class="lv-ee-title">↓ Entrances</h4>
+          <ul class="lv-ee-list">
+            <li>Noclipping out of reality from the Frontrooms — the most common method of first entry</li>
+            <li>Wooden doors smelling of mould found in the fortresses of Level 283</li>
+            <li>Entering the first door in The Hub</li>
+          </ul>
+        </div>
+        <div class="lv-ee-block">
+          <h4 class="lv-ee-title">↑ Exits</h4>
+          <ul class="lv-ee-list">
+            <li>Noclipping through any wall — exits always lead to Level 1</li>
+            <li>Noclipping is the only confirmed method of exit from the main level</li>
+            <li>The Manila Room offers no direct exit but contains guidance on escape</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+  <footer class="bk-footer text-center py-4">
+    <p class="mb-0">THE BACKROOMS WIKI &nbsp;|&nbsp; ALL INFORMATION COLLECTED AT GREAT PERSONAL RISK</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
